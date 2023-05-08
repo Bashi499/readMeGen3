@@ -8,35 +8,57 @@ const promptUser = () =>
   inquirer.prompt([
     {
       type: 'input',
-      name: 'name',
+      name: 'author',
       message: 'What is your name?',
     },
     {
       type: 'input',
-      name: 'location',
-      message: 'Where are you from?',
+      name: 'username',
+      message: 'What is your username on Github?',
     },
     {
       type: 'input',
-      name: 'hobby',
-      message: 'What is your favorite hobby?',
+      name: 'email',
+      message: 'What is your email?',
     },
     {
       type: 'input',
-      name: 'food',
-      message: 'What is your favorite food?',
+      name: 'title',
+      message: 'What is the title of your project?',
     },
     {
       type: 'input',
-      name: 'github',
-      message: 'Enter your GitHub Username',
+      name: 'description',
+      message: 'Could you please describe your project?',
+    },
+    {
+      type: 'lsit',
+      name: 'license',
+      message: 'What license does the project use?',
     },
     {
       type: 'input',
-      name: 'linkedin',
-      message: 'Enter your LinkedIn URL.',
+      name: 'installations',
+      message: 'How would you install dependencies?'
     },
-  ]);
+    {
+      type: 'input',
+      name: 'tests',
+      message: 'what commands are used to run tests?'
+    },
+    {
+      type: 'input',
+      name: 'usage',
+      message: 'Are there any notes for using the app?'
+    },
+    {
+      type: 'input',
+      name: 'contribute',
+      message: 'Are there any user messages about contributing to the app?'
+    },
+]);
+
+
 
 const generateHTML = (answers) =>
 `<!DOCTYPE html>
