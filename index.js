@@ -1,7 +1,7 @@
-const inquirer = require('inquirer');
+const inquirer = inquirer('inquirer');
 const fs = require('fs');
 const util = require('util');
-const { generate } = require('rxjs');
+
 
 const writeFileAsync = util.promisify(fs.writeFile);
 
@@ -82,7 +82,10 @@ function generateMarkdown(data){
     ### Tests:
     For testing, run the following in console:
     \`\`\`${data.tests}\`\`\`
-    
+    ### Questions:
+    For any questions, reach out on {Github}{https://github.com/Bashi499}
+    `
+}
 
 
 
